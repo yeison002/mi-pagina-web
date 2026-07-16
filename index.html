@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CECyTEM Plantel Aculco - Colegio de Estudios Científicos y Tecnológicos del Estado de México" />
+  <meta name="keywords" content="CECyTEM, Aculco, preparatoria, bivalente, Estado de México, Técnico en Programación, Producción de Alimentos" />
+  <meta name="author" content="CECyTEM Aculco" />
+  <title>CECyTEM Plantel Aculco | Preparatoria Bivalente</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet" />
+  
+  <!-- CSS personalizado -->
+  <style>
+    :root {
+      --color-navy: #002147;
+      --color-wine: #800020;
+      --color-wine-hover: #5a0016;
+    }
+    body { font-family: 'Montserrat', sans-serif; }
+    
+    .bg-navy { background-color: var(--color-navy) !important; }
+    .text-navy { color: var(--color-navy) !important; }
+    .bg-wine { background-color: var(--color-wine) !important; }
+    .text-wine { color: var(--color-wine) !important; }
+    
+    .btn-wine {
+      background-color: var(--color-wine);
+      color: white;
+      border: 2px solid var(--color-wine);
+      transition: all 0.3s ease;
+    }
+    .btn-wine:hover {
+      background-color: var(--color-wine-hover);
+      border-color: var(--color-wine-hover);
+      color: white;
+    }
+    .btn-outline-navy {
+      color: var(--color-navy);
+      border: 2px solid var(--color-navy);
+      transition: all 0.3s ease;
+    }
+    .btn-outline-navy:hover {
+      background-color: var(--color-navy);
+      color: white;
+    }
+
+    .hero-section {
+  background: linear-gradient(rgba(0, 33, 71, 0.75), rgba(128, 0, 32, 0.6)), url('./IMG/cecytem3.webp') no-repeat center center/cover;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+    .hover-lift {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .hover-lift:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0.5rem 1.5rem rgba(0,33,71,0.15) !important;
+    }
+    .aliado-link {
+      transition: transform 0.3s ease, color 0.3s ease;
+      display: block;
+      text-decoration: none;
+      color: inherit;
+    }
+    .aliado-link:hover {
+      transform: scale(1.08);
+      color: var(--color-wine);
+    }
+    .galeria-img {
+      transition: transform 0.3s ease;
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .galeria-img:hover {
+      transform: scale(1.03);
+    }
+    .section-title {
+      font-weight: 800;
+      margin-bottom: 1rem;
+      position: relative;
+      display: inline-block;
+    }
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 4px;
+      background: var(--color-wine);
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNavbar" data-bs-offset="80" tabindex="0">
+
+  <!-- ===================== NAVBAR CON ANCLAS ===================== -->
+  <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark bg-navy fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#inicio">
+        <i class="bi bi-mortarboard-fill"></i> CECyTEM Aculco
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="#nosotros">Sobre nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="#mision">Misión y visión</a></li>
+          <li class="nav-item"><a class="nav-link" href="#servicios">Oferta Educativa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certificaciones">Certificaciones</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sustentabilidad">Sustentabilidad</a></li>
+          <li class="nav-item"><a class="nav-link" href="#aliados">Aliados</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonios">Testimonios</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== 1. INICIO (HERO) ===================== -->
+  <header id="inicio" class="hero-section d-flex align-items-center">
+    <div class="container position-relative text-center text-white">
+      <h1 class="display-3 fw-bold">CECyTEM Plantel Aculco</h1>
+      <p class="lead">Formando jóvenes con ciencia, tecnología y valores en el corazón del Estado de México</p>
+      <a href="#contacto" class="btn btn-wine btn-lg me-2 mt-3">
+        <i class="bi bi-pencil-square"></i> Inscríbete
+      </a>
+      <a href="#nosotros" class="btn btn-outline-light btn-lg mt-3">
+        <i class="bi bi-info-circle"></i> Conócenos
+      </a>
+    </div>
+  </header>
+
+  <!-- ===================== 2. SOBRE NOSOTROS ===================== -->
+  <section id="nosotros" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Sobre Nosotros</h2>
+      <div class="row align-items-center mt-4">
+        <div class="col-md-6">
+          <p>
+            El <strong>Colegio de Estudios Científicos y Tecnológicos del Estado de México (CECyTEM)</strong>
+            es una institución de educación media superior perteneciente al Gobierno del Estado de México.
+            Nuestro plantel Aculco ofrece una <strong>preparatoria bivalente</strong>, donde los estudiantes
+            obtienen su certificado de bachillerato y, al mismo tiempo, una certificación técnica profesional.
+          </p>
+          <p>
+            Nuestros planes de estudio de carácter bivalente abren la posibilidad de que los egresados cuenten con educación tecnológica terminal que les permita incorporarse a una actividad productiva, o bien, continuar sus estudios de nivel superior. Con firme decisión enfrentamos los retos actuales: elevar la calidad educativa, ampliar la cobertura, innovar la oferta educativa y promover la vinculación escuela-empresa.
+          </p>
+          <p>
+            Ubicados en el pintoresco municipio de <strong>Aculco de Espinoza</strong>, Pueblo Mágico del Estado de México, formamos estudiantes con pensamiento crítico, habilidades técnicas y compromiso social.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <table class="table table-striped table-hover table-bordered shadow-sm bg-white">
+            <thead class="bg-navy text-white">
+              <tr>
+                <th colspan="2" class="text-center">Datos Institucionales</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>Nombre oficial</strong></td><td>CECyTEM Plantel Aculco</td></tr>
+              <tr><td><strong>Nivel educativo</strong></td><td>Media Superior (Bivalente)</td></tr>
+              <tr><td><strong>Dirección</strong></td><td>Parcela No. 54, Carretera Panamericana, Aculco de Espinoza, Edomex</td></tr>
+              <tr><td><strong>Horario</strong></td><td>Lunes a Viernes 7:00 - 14:30</td></tr>
+              <tr><td><strong>Alumnos</strong></td><td>+450 estudiantes</td></tr>
+              <tr><td><strong>Docentes</strong></td><td>35 profesores certificados</td></tr>
+              <tr><td><strong>Fundación</strong></td><td>Plantel activo desde 2005</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3. MISIÓN Y VISIÓN ===================== -->
+  <section id="mision" class="py-5">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Misión y Visión</h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 card-mision hover-lift" style="border-top: 4px solid var(--color-wine) !important;">
+            <div class="card-body text-center p-5">
+              <i class="bi bi-bullseye display-1 text-wine"></i>
+              <h3 class="mt-3 text-navy">Misión</h3>
+              <p class="text-muted">
+                Impartir educación media superior de calidad, en su modalidad de bachillerato tecnológico bivalente, con el objeto de que los egresados cuenten con educación tecnológica terminal que les permita incorporarse a una actividad productiva, o bien, continuar sus estudios de nivel superior.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0 card-vision hover-lift" style="border-top: 4px solid var(--color-navy) !important;">
+            <div class="card-body text-center p-5">
+              <i class="bi bi-eye-fill display-1 text-navy"></i>
+              <h3 class="mt-3 text-navy">Visión</h3>
+              <p class="text-muted">
+                Ser la mejor opción en educación media superior en su modalidad de bachillerato tecnológico bivalente en el Sistema Nacional de los CECyTE’s, así como en el Estado de México.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4. OFERTA EDUCATIVA ===================== -->
+  <section id="servicios" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Oferta Educativa</h2>
+      <p class="text-center text-muted mb-5">
+        Nuestro modelo bivalente combina el bachillerato general con formación técnica certificada, preparándote para la universidad o el mundo laboral.
+      </p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card servicio-card h-100 text-center p-4 border-0 shadow-sm hover-lift bg-white">
+            <i class="bi bi-book display-3 text-navy mb-3"></i>
+            <h4 class="mt-3 text-navy">Bachillerato General</h4>
+            <p class="text-muted">Plan de estudios oficial de la SEP con validez en todo el país, brindando las bases sólidas en ciencias, humanidades y matemáticas para continuar estudios de nivel superior.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card servicio-card h-100 text-center p-4 border-0 shadow-sm hover-lift bg-white" style="border-top: 4px solid var(--color-wine) !important;">
+            <i class="bi bi-laptop display-3 text-wine mb-3"></i>
+            <h4 class="mt-3 text-navy">Técnico en Programación</h4>
+            <p class="text-muted">Desarrolla competencias para analizar, diseñar y crear software, aplicaciones web y móviles, utilizando lenguajes de programación modernos, lógica computacional y bases de datos.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card servicio-card h-100 text-center p-4 border-0 shadow-sm hover-lift bg-white" style="border-top: 4px solid var(--color-navy) !important;">
+            <i class="bi bi-cup-hot display-3 text-navy mb-3"></i>
+            <h4 class="mt-3 text-navy">Técnico en Producción Industrial de Alimentos</h4>
+            <p class="text-muted">Aprende a conservar, procesar y transformar materias primas en productos alimenticios de alta calidad, cumpliendo con las normativas de inocuidad y procesos industriales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 5. CERTIFICACIONES OFICIALES ===================== -->
+  <section id="certificaciones" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Certificaciones Oficiales</h2>
+      <p class="text-center text-muted mb-5">
+        Al concluir tus estudios, obtienes una doble titulación que avala tus conocimientos a nivel nacional y te abre las puertas del mercado laboral.
+      </p>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-light" style="border-top: 4px solid var(--color-wine) !important;">
+            <i class="bi bi-patch-check-fill display-3 text-wine mb-3"></i>
+            <h4 class="mt-3 text-navy">Certificado de Bachillerato</h4>
+            <p class="text-muted">Reconocido por la SEP, acredita la conclusión de la educación media superior, permitiéndote continuar estudios de licenciatura o ingeniería en cualquier institución del país.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-light" style="border-top: 4px solid var(--color-navy) !important;">
+            <i class="bi bi-award-fill display-3 text-navy mb-3"></i>
+            <h4 class="mt-3 text-navy">Título de Técnico Profesional</h4>
+            <p class="text-muted">Título profesional a nivel técnico en <strong>Programación</strong> o <strong>Producción Industrial de Alimentos</strong>, avalado oficialmente por el Gobierno del Estado de México.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-light" style="border-top: 4px solid var(--color-wine) !important;">
+            <i class="bi bi-shield-check display-3 text-wine mb-3"></i>
+            <h4 class="mt-3 text-navy">Estándares de Competencia</h4>
+            <p class="text-muted">Certificaciones adicionales en competencias laborales específicas (como desarrollo de código de software o inocuidad alimentaria), aumentando tu empleabilidad inmediata.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6. SUSTENTABILIDAD Y MANEJO DE RESIDUOS ===================== -->
+  <section id="sustentabilidad" class="py-5" style="background-color: #f0fdf4;">
+    <div class="container">
+      <h2 class="section-title text-center text-success">Sustentabilidad y Manejo de Residuos</h2>
+      <p class="text-center text-muted mb-5">
+        Comprometidos con el medio ambiente, implementamos prácticas responsables para la reducción, separación y reciclaje de residuos en nuestro plantel.
+      </p>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-white">
+            <i class="bi bi-recycle display-3 text-success mb-3"></i>
+            <h4 class="text-navy">Separación de Residuos</h4>
+            <p class="text-muted">Contenedores diferenciados en todo el plantel para residuos orgánicos, inorgánicos reciclables (PET, cartón, aluminio) y no reciclables.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-white">
+            <i class="bi bi-droplet-half display-3 text-info mb-3"></i>
+            <h4 class="text-navy">Cuidado del Agua</h4>
+            <p class="text-muted">Programas de concientización sobre el uso eficiente del agua y mantenimiento preventivo de instalaciones hidráulicas para evitar fugas y desperdicios.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 border-0 shadow-sm text-center p-4 hover-lift bg-white">
+            <i class="bi bi-tree-fill display-3 text-success mb-3"></i>
+            <h4 class="text-navy">Reforestación y Áreas Verdes</h4>
+            <p class="text-muted">Jornadas semestrales de reforestación y mantenimiento de las áreas verdes del plantel para promover un entorno saludable, limpio y ecológico.</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-5">
+        <div class="alert alert-success d-inline-block shadow-sm" role="alert">
+          <i class="bi bi-info-circle-fill"></i> <strong>¿Sabías que?</strong> Separar correctamente tus residuos ayuda a reducir la huella de carbono de nuestra comunidad. ¡Únete al cambio!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 7. CLIENTES / ALIADOS ESTRATÉGICOS ===================== -->
+  <section id="aliados" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Aliados Estratégicos</h2>
+      <p class="text-center text-muted mb-5">
+        Instituciones y empresas que respaldan nuestra labor educativa y vinculación.
+      </p>
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <a href="https://www.edomex.gob.mx/" target="_blank" rel="noopener" class="aliado-link">
+            <i class="bi bi-buildings display-2 text-navy"></i>
+            <p class="mt-2 fw-bold text-navy">Gobierno del Edo. Méx.</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="https://www.gob.mx/sep" target="_blank" rel="noopener" class="aliado-link">
+            <i class="bi bi-mortarboard display-2 text-success"></i>
+            <p class="mt-2 fw-bold text-navy">SEP</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="https://www.arcomex.com/" target="_blank" rel="noopener" class="aliado-link">
+            <i class="bi bi-building-check display-2 text-dark"></i>
+            <p class="mt-2 fw-bold text-navy">ARCOMEX</p>
+          </a>
+        </div>
+        <div class="col-6 col-md-3">
+          <a href="https://www.aculco.gob.mx/" target="_blank" rel="noopener" class="aliado-link">
+            <i class="bi bi-building display-2 text-navy"></i>
+            <p class="mt-2 fw-bold text-navy">H. Ayunt. Aculco</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 8. GALERÍA / PORTAFOLIO ===================== -->
+  <section id="galeria" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Galería</h2>
+      <p class="text-center text-muted mb-5">Momentos destacados de nuestra comunidad estudiantil.</p>
+      <div class="row g-3">
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=1" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/img1.jpg" class="img-fluid rounded shadow galeria-img" alt="Laboratorio" />
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=2" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/11MG.jpg" class="img-fluid rounded shadow galeria-img" alt="Aulas" />
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=3" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/12MG.jpg" class="img-fluid rounded shadow galeria-img" alt="Eventos" />
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=4" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/13MG.jpg" class="img-fluid rounded shadow galeria-img" alt="Deportes" />
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=5" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/img2.jpg" class="img-fluid rounded shadow galeria-img" alt="Graduación" />
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <a href="https://picsum.photos/1200/800?random=6" data-bs-toggle="modal" data-bs-target="#modalGaleria">
+            <img src="IMG/img3.jpg" class="img-fluid rounded shadow galeria-img" alt="Talleres" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 9. TESTIMONIOS / CASOS DE ÉXITO ===================== -->
+  <section id="testimonios" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Testimonios y Casos de Éxito</h2>
+      <div id="carouselTestimonios" class="carousel slide mt-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card shadow-sm p-5 text-center border-0">
+                  <i class="bi bi-quote display-3 text-wine"></i>
+                  <p class="lead fst-italic mt-3 text-muted">
+                    "Estudiar en CECyTEM Aculco me permitió obtener mi bachillerato y al mismo tiempo
+                    una certificación técnica en programación. Hoy trabajo como desarrollador web
+                    gracias a las bases que recibí aquí."
+                  </p>
+                  <h5 class="fw-bold text-navy">- Juan Angel Escamila, egresado generación 2023</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card shadow-sm p-5 text-center border-0">
+                  <i class="bi bi-quote display-3 text-wine"></i>
+                  <p class="lead fst-italic mt-3 text-muted">
+                    "Los profesores son excelentes y siempre están dispuestos a apoyarte. El ambiente
+                    escolar es muy sano y las actividades extracurriculares me ayudaron a descubrir
+                    mi vocación por la ingeniería en alimentos."
+                  </p>
+                  <h5 class="fw-bold text-navy">- Afonso Andrade Mauro, estudiante de 6° semestre</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row justify-content-center">
+              <div class="col-md-8">
+                <div class="card shadow-sm p-5 text-center border-0">
+                  <i class="bi bi-quote display-3 text-wine"></i>
+                  <p class="lead fst-italic mt-3 text-muted">
+                    "Como padre de familia, estoy agradecido con la escuela. Mi hijo no solo aprende
+                    materias académicas, sino también valores y habilidades técnicas que le servirán
+                    toda la vida."
+                  </p>
+                  <h5 class="fw-bold text-navy">- Sr. Nemecio Gonzalez de Jesus, padre de familia</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-wine rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselTestimonios" data-bs-slide="next">
+          <span class="carousel-control-next-icon bg-wine rounded-circle p-3" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 10. FORMAS DE CONTACTO (VÍA WHATSAPP) ===================== -->
+  <section id="contacto" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Contáctanos</h2>
+      <div class="row g-4 mt-2">
+        <div class="col-md-6">
+          <h4 class="text-navy"><i class="bi bi-whatsapp text-success"></i> Envíanos un mensaje por WhatsApp</h4>
+          <p class="text-muted small">Al hacer clic en "Enviar", se abrirá WhatsApp con tu mensaje preformateado listo para enviarse al número de atención.</p>
+          <form id="formContacto" class="needs-validation bg-light p-4 rounded shadow-sm" novalidate>
+            <div class="mb-3">
+              <label for="nombre" class="form-label fw-bold">Nombre completo *</label>
+              <input type="text" class="form-control" id="nombre" name="nombre" required minlength="3" />
+              <div class="invalid-feedback">Ingresa tu nombre (mínimo 3 caracteres).</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold">Correo electrónico *</label>
+              <input type="email" class="form-control" id="email" name="email" required />
+              <div class="invalid-feedback">Ingresa un correo válido.</div>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label fw-bold">Teléfono</label>
+              <input type="tel" class="form-control" id="telefono" name="telefono" pattern="[0-9]{10}" placeholder="10 dígitos" />
+              <div class="invalid-feedback">Ingresa 10 dígitos.</div>
+            </div>
+            <div class="mb-3">
+              <label for="asunto" class="form-label fw-bold">Asunto *</label>
+              <select class="form-select" id="asunto" name="asunto" required>
+                <option value="">-- Selecciona --</option>
+                <option value="Inscripciones">Inscripciones</option>
+                <option value="Información general">Información general</option>
+                <option value="Becas y apoyos">Becas y apoyos</option>
+                <option value="Otro">Otro</option>
+              </select>
+              <div class="invalid-feedback">Selecciona un asunto.</div>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label fw-bold">Mensaje *</label>
+              <textarea class="form-control" id="mensaje" name="mensaje" rows="4" required placeholder="Escribe tu duda o mensaje aquí..."></textarea>
+              <div class="invalid-feedback">Escribe tu mensaje.</div>
+            </div>
+            <div class="form-check mb-3">
+              <input class="form-check-input" type="checkbox" id="privacidad" required />
+              <label class="form-check-label" for="privacidad">
+                Acepto el <a href="#privacidad" class="text-wine">aviso de privacidad</a> *
+              </label>
+            </div>
+            <button type="submit" class="btn btn-wine w-100 fw-bold">
+              <i class="bi bi-whatsapp"></i> Enviar por WhatsApp
+            </button>
+          </form>
+        </div>
+
+        <div class="col-md-6">
+          <h4 class="text-navy"><i class="bi bi-geo-alt-fill text-wine"></i> Ubicación</h4>
+          <p class="text-muted">
+            <strong>Dirección:</strong> Parcela No. 54, Carretera Panamericana, Aculco de Espinoza, Estado de México.<br />
+            <strong>Teléfono:</strong> 56 3043 5131<br />
+            <strong>Correo:</strong> plantel.aculco@cecytem.mx
+          </p>
+
+          <div class="ratio ratio-16x9 shadow-sm rounded mb-4">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15016.45!2d-99.81!3d19.98!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zQWN1bGNvIGRlIEVzcGlub3ph!5e0!3m2!1ses!2smx!4v1700000000000"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Ubicación CECyTEM Aculco">
+            </iframe>
+          </div>
+
+          <h4 class="text-navy"><i class="bi bi-play-circle-fill text-wine"></i> Video institucional</h4>
+          <div class="ratio ratio-16x9 shadow-sm rounded">
+            <iframe
+              src="https://www.youtube.com/embed/5HrWzfynF7Y"
+              title="Video institucional CECyTEM"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 11. REDES SOCIALES ===================== -->
+  <section class="py-5 text-center bg-navy text-white">
+    <div class="container">
+      <h2 class="fw-bold">Síguenos en redes sociales</h2>
+      <div class="mt-4">
+        <a href="https://www.facebook.com/CECyTEMAculco" target="_blank" rel="noopener" class="btn btn-light btn-lg mx-2 mb-2 social-btn hover-lift text-navy">
+          <i class="bi bi-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/cecytem_aculco" target="_blank" rel="noopener" class="btn btn-light btn-lg mx-2 mb-2 social-btn hover-lift text-navy">
+          <i class="bi bi-instagram"></i> Instagram
+        </a>
+        <a href="https://twitter.com/CECyTEM_Edomex" target="_blank" rel="noopener" class="btn btn-light btn-lg mx-2 mb-2 social-btn hover-lift text-navy">
+          <i class="bi bi-twitter-x"></i> Twitter/X
+        </a>
+        <a href="https://www.youtube.com/@CECyTEMAculco" target="_blank" rel="noopener" class="btn btn-light btn-lg mx-2 mb-2 social-btn hover-lift text-navy">
+          <i class="bi bi-youtube"></i> YouTube
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 12. AVISO DE PRIVACIDAD ===================== -->
+  <section id="privacidad" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title text-center text-navy">Aviso de Privacidad</h2>
+      <div class="row mt-4">
+        <div class="col-md-10 offset-md-1">
+          <div class="card shadow-sm p-4 border-0">
+            <p>
+              <strong>CECyTEM Plantel Aculco</strong>, con domicilio en Aculco de Espinoza, Estado de
+              México, es el responsable del uso y protección de sus datos personales, y al respecto
+              le informamos lo siguiente:
+            </p>
+            <h5 class="text-wine">¿Para qué fines utilizaremos sus datos personales?</h5>
+            <p>
+              Los datos personales recabados serán utilizados para las siguientes finalidades primarias:
+              atención de solicitudes de información, proceso de inscripción, comunicación académica
+              y administrativa, y seguimiento de egresados.
+            </p>
+            <h5 class="text-wine">¿Qué datos personales utilizaremos?</h5>
+            <ul>
+              <li>Nombre completo</li>
+              <li>Correo electrónico</li>
+              <li>Teléfono</li>
+              <li>Domicilio</li>
+              <li>Datos académicos</li>
+            </ul>
+            <h5 class="text-wine">Transferencia de datos</h5>
+            <p>
+              Sus datos personales no serán transferidos a terceros sin su consentimiento expreso,
+              salvo las obligaciones establecidas por la Ley de Protección de Datos Personales en
+              Posesión de Sujetos Obligados del Estado de México y Municipios.
+            </p>
+            <h5 class="text-wine">Derechos ARCO</h5>
+            <p>
+              Usted tiene derecho a Acceder, Rectificar, Cancelar u Oponerse al uso de sus datos
+              personales (derechos ARCO). Para ejercerlos, envíe un correo a
+              <a href="mailto:privacidad@cecytem-aculco.edu.mx" class="text-wine">privacidad@cecytem-aculco.edu.mx</a>.
+            </p>
+            <p class="text-muted small mt-3">Última actualización: 15 de julio de 2026.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="bg-navy text-white py-4 border-top border-2" style="border-color: var(--color-wine) !important;">
+    <div class="container text-center">
+      <p class="mb-1">&copy; 2026 CECyTEM Plantel Aculco. Todos los derechos reservados.</p>
+      <p class="mb-0 small">
+        <a href="#inicio" class="text-white text-decoration-none">Inicio</a> |
+        <a href="#privacidad" class="text-white text-decoration-none">Aviso de privacidad</a> |
+        <a href="#contacto" class="text-white text-decoration-none">Contacto</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp (Visible en todo momento) -->
+  <a href="https://wa.me/525630435131?text=Hola,%20me%20gustaría%20obtener%20más%20información%20sobre%20CECyTEM%20Aculco" 
+     target="_blank" 
+     rel="noopener"
+     class="btn btn-success rounded-circle shadow-lg d-flex align-items-center justify-content-center position-fixed"
+     style="bottom: 30px; right: 30px; width: 65px; height: 65px; z-index: 1050; font-size: 32px; transition: transform 0.3s ease;"
+     onmouseover="this.style.transform='scale(1.1)'" 
+     onmouseout="this.style.transform='scale(1)'"
+     title="Contáctanos por WhatsApp">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <!-- Lógica de Formulario a WhatsApp y Validación -->
+  <script>
+    (() => {
+      'use strict';
+      const form = document.getElementById('formContacto');
+      
+      form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+        
+        // Obtener valores
+        const nombre = document.getElementById('nombre').value;
+        const email = document.getElementById('email').value;
+        const telefono = document.getElementById('telefono').value || 'No proporcionado';
+        const asunto = document.getElementById('asunto').value;
+        const mensaje = document.getElementById('mensaje').value;
+        
+        // Construir mensaje de WhatsApp
+        const textoWhatsApp = `*Nuevo mensaje desde la web CECyTEM Aculco*%0A%0A` +
+                              `*Nombre:* ${nombre}%0A` +
+                              `*Correo:* ${email}%0A` +
+                              `*Teléfono:* ${telefono}%0A` +
+                              `*Asunto:* ${asunto}%0A` +
+                              `*Mensaje:* ${mensaje}`;
+                              
+        // Número proporcionado: 5630435131
+        const urlWhatsApp = `https://wa.me/525630435131?text=${textoWhatsApp}`;
+        
+        // Abrir WhatsApp en nueva pestaña
+        window.open(urlWhatsApp, '_blank');
+        
+        // Resetear formulario
+        form.classList.remove('was-validated');
+        form.reset();
+      }, false);
+    })();
+  </script>
+</body>
+</html>
